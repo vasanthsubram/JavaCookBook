@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  
+<config xmlns="urn:org:jgroups" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	
+	<UDP 
+		mcast_addr="224.0.0.1"
+		mcast_port="45566" 
+		bind_addr="127.0.0.1"
+		ip_ttl = "1"
+	/>	
+	<PING/>
+	<MERGE2/>
+	<FD_SOCK/> 
+	<VERIFY_SUSPECT/>
+	<pbcast.NAKACK />
+	<UNICAST />
+	<pbcast.STABLE />
+	<FRAG />
+	<pbcast.GMS />
+	
+</config>
+                       

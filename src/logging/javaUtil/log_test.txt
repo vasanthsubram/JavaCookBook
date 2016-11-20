@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE log SYSTEM "logger.dtd">
+<log>
+<record>
+  <date>2011-10-28T11:18:55</date>
+  <millis>1319825935667</millis>
+  <sequence>0</sequence>
+  <logger>LoggingExample1</logger>
+  <level>INFO</level>
+  <class>logging.javaUtil.LoggingUsingBuiltInLogging</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>test 1</message>
+</record>
+<record>
+  <date>2011-10-28T11:18:55</date>
+  <millis>1319825935719</millis>
+  <sequence>1</sequence>
+  <logger>LoggingExample1</logger>
+  <level>INFO</level>
+  <class>logging.javaUtil.LoggingUsingBuiltInLogging</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>test 2</message>
+</record>
+<record>
+  <date>2011-10-28T11:18:55</date>
+  <millis>1319825935719</millis>
+  <sequence>2</sequence>
+  <logger>LoggingExample1</logger>
+  <level>INFO</level>
+  <class>logging.javaUtil.LoggingUsingBuiltInLogging</class>
+  <method>main</method>
+  <thread>10</thread>
+  <message>test 3</message>
+</record>
+</log>

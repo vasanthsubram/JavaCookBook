@@ -1,0 +1,47 @@
+	
+	
+	Object str = "Hello";
+	System.out.println(str.length());
+	
+		
+	// What is the difference between Integer and int?
+	
+		
+	//Explain the following
+		Integer i = 5;
+				
+				
+	//what will the following code print ?
+		Integer j = null;
+		int k = j;
+		System.out.println(k);
+	
+	
+	//what will the following code print and why ?
+		String x = "Hello";
+		String y = x;
+		x = x + " World";
+		
+		System.out.println(x);
+		System.out.println(y);
+		System.out.println(x==y);
+	
+	
+	
+	//how to serialize this an instance of this object except UIWindow
+		class Widget {
+			int x;
+			String s;
+			//don't serialize this
+			UIWindow y;
+		}
+	
+	// What is the difference between Reader/Writer and InputStream/Output Stream?
+	
+	
+	// what is one major drawback about Recursion that you need to think about when using it ?
+	
+	
+	// write a query to get, the number of rows with the same length of a String column C and length of column C, in a table
+	
+	
