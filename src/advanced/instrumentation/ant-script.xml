@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="codejam" default="main" basedir="">
+    
+    <description>
+        simple example build file
+    </description>
+    <target name="main">
+    <!--jar destfile="${basedir}/bin/instrumentation/myagent.jar"-->
+    <jar destfile="${basedir}/instrumentation/myagent.jar">
+        <manifest>
+    		<attribute name="PreMain-Class" value="instrumentation.MyAgent"/>
+    	</manifest>
+    	<fileset dir="${basedir}/bin">
+    		<filename name="instrumentation/MyAgent.class"/>
+    	</fileset>
+    	
+    	<fileset dir="${basedir}/bin">
+    		<filename name="manifest.txt"/>
+    	</fileset>
+    </jar>
+    </target>
+</project>
