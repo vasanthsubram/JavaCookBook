@@ -1,5 +1,8 @@
 package datastructure.LinkedList;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Simple linked list
  * Add or delete a link at the beginning of the linked list
@@ -53,8 +56,23 @@ class SimpleLinkList {
 		n2.next=n1;
 		head=n2;
 	}
-	
-	
+
+	boolean hasCycle() {
+		if(head==null) return false;
+		if(head.next==null) return false;
+		Link current=head;
+		List visited=new ArrayList<Link>();
+
+		while(current!=null){
+			if(visited.contains(current)){
+				return true;
+			}
+			visited.add(current);
+			current=current.next;
+		}
+		return false;
+	}
+
 	public void printList() {
 		Link currentLink = head;
 		System.out.print("List: ");
@@ -66,7 +84,7 @@ class SimpleLinkList {
 	}
 
 
-	 class Link {
+	 static class Link {
 		public int data;
 		
 		public Link next;
@@ -81,11 +99,8 @@ class SimpleLinkList {
 	}
 	 
 	 public static void main(String[] args) {
-			SimpleLinkList list = new SimpleLinkList();
+		 SimpleLinkList list = createList();
 
-		 for(int i=0;i<10;i++){
-			list.insert(i);
-		 }
 		 System.out.println("head = " + list.head.data);
 			list.printList();
 			list.reverse();
@@ -100,5 +115,35 @@ class SimpleLinkList {
 				System.out.println("");
 			}
 			list.printList();
-		}
+
+		 list = createList();
+
+		 System.out.println(list.hasCycle());
+
+		 Link current=list.head;
+		 while(current!=null){
+			 if(current.next!=null) {
+				 current = current.next;
+			 } else{
+				 break;
+			 }
+		 }
+		 current.next=list.head;
+
+		 System.out.println(list.hasCycle());
+
+
+	 }
+
+	private static SimpleLinkList  createList(){
+		SimpleLinkList list = new SimpleLinkList();
+
+		list.insert(3);
+		list.insert(5);
+		list.insert(1);
+		list.insert(8);
+		return list;
+	}
+
+
 }
