@@ -1,4 +1,4 @@
-package patterns.creational.singleton.simple;
+package patterns.creational.singleton;
 
 
 import static org.junit.Assert.assertTrue;
