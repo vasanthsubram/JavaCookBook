@@ -1,30 +1,24 @@
 package patterns.creational.singleton.simple;
 
+import static org.junit.Assert.assertTrue;
+
+/**
+ * Simple way to create Singleton
+ * Create the lone instance when the class loads
+ */
 public class Singleton {
 
-//	private static final Singleton _instance = new Singleton();
-
-	//lazy init
-	private static volatile Singleton _instance;
+	private static final Singleton _instance = new Singleton();
 
 	// Private constructor prevents instantiation from other classes
-	private Singleton() {
-	}
+	private Singleton() {}
 
-//	public static Singleton getInstance() {
-//		return _instance;
-//	}
-
-	//lazy init
 	public static Singleton getInstance(){
-	   if(_instance == null){
-	            synchronized(Singleton.class){
-	              if(_instance == null)
-	              _instance = new Singleton();
-	            }
-	   }
 	   return _instance;
 	}
-	
+
+	public static void main(String[] args) {
+		assertTrue(Singleton.getInstance()==Singleton.getInstance());
+	}
 }
 
