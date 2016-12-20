@@ -12,11 +12,15 @@ public class OptionalTest {
 			Optional<String> opt = Optional.empty();
 			try{
 				System.out.println(opt.get());
-			} catch(NoSuchElementException e){}
+			} catch(NoSuchElementException e){
+				System.out.println("Exception: no value");
+			}
 			
 			opt=Optional.of("Hello");
 			opt.ifPresent(System.out::println);
-			
+
+
+			//ifPresent
 			Stream.of("a1", "a2", "a3")
 			.findFirst()
 			.ifPresent(System.out::println); // a1

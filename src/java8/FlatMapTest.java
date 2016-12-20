@@ -1,5 +1,6 @@
 package java8;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -17,5 +18,10 @@ public class FlatMapTest {
 		.collect(Collectors.toList());
 		
 		System.out.println(list);
+
+		//list files and directories and files in the subdirectory
+		Stream<File> fileStream = Stream.of(new File("./src/java8/").listFiles());
+		fileStream.flatMap(file -> file.listFiles() == null ? Stream.of(file) : Stream.of(file.listFiles()))
+				.forEach(System.out::println);
 	}
 }

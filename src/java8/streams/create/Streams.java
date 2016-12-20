@@ -34,6 +34,7 @@ public class Streams {
 
 
 		//Stream.generate()
+		//The generate() method accepts a Supplier<T> for element generation.
 		//Returns an infinite sequential unordered stream
 		Stream.generate(() -> {return new Date();}).limit(2).forEach(System.out::println);
 
