@@ -1,4 +1,4 @@
-package lambda.function.consumer;
+package lambda.consumer;
 
 import java.util.function.Consumer;
 

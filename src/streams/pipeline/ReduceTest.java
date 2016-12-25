@@ -23,6 +23,10 @@ public class ReduceTest {
         final List<Integer> numbers = Arrays.asList(1,2,3,4,5);
         int sum = numbers.stream().reduce(0,(num1,num2) -> num1+num2);
         System.out.println("Sum is " + sum);
+
+        //another way to reduce -- use the Integer::sum
+        int sum2 = numbers.stream().reduce(0, Integer::sum);
+        System.out.println(sum2);
     }
 
 }

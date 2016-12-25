@@ -6,7 +6,7 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
-public class LambdaFunctionsTest {
+public class LambdaDemo {
 
 	public static void main(String[] args) {
 
@@ -16,8 +16,7 @@ public class LambdaFunctionsTest {
 		List<Employee> empList = Employee.shortList();
 		// Lambda supports 'target typing' - compiler deducts e1 and e2 are
 		// Employee type
-		Collections.sort(empList,
-				(e1, e2) -> e1.getName().compareTo(e2.getName()));
+		Collections.sort(empList, (e1, e2) -> e1.getName().compareTo(e2.getName()));
 		empList.forEach(n -> System.out.println(n));
 
 		List<Integer> list = Arrays.asList(1, 2, 3);

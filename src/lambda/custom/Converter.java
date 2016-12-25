@@ -1,4 +1,4 @@
-package lambda.function.custom;
+package lambda.custom;
 
 @FunctionalInterface
 interface Converter<F, T> {

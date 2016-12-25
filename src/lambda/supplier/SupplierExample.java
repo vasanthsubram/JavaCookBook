@@ -1,4 +1,4 @@
-package lambda.function.supplier;
+package lambda.supplier;
 
 import java.util.function.Supplier;
 
