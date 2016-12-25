@@ -1,4 +1,4 @@
-package java8.streams.create;
+package streams.create;
 
 import java.util.regex.Pattern;
 import java.util.stream.Stream;

@@ -1,4 +1,4 @@
-package java8.functional;
+package lambda.function.custom;
 
 public class FunctionalTest {
 
@@ -10,6 +10,5 @@ public class FunctionalTest {
 			Converter<String, Integer> converter2 = Integer::valueOf;
 			Integer converted2 = converter2.convert("456");
 			System.out.println(converted2);   // 456
-			
 		}
 }

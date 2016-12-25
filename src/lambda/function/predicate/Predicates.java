@@ -1,7 +1,6 @@
-package java8;
+package lambda.function.predicate;
 
 import java.util.Objects;
-import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Predicates {

@@ -1,4 +1,4 @@
-package java8.streams.pipeline;
+package streams.pipeline;
 
 import java.util.Arrays;
 import java.util.List;

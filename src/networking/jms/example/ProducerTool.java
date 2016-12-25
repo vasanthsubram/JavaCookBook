@@ -89,7 +89,7 @@ public class ProducerTool {
                 destination = session.createQueue(subject);
             }
 
-            // Create the producer.
+            // Create the supplier.
             MessageProducer producer = session.createProducer(destination);
             if (persistent) {
                 producer.setDeliveryMode(DeliveryMode.PERSISTENT);

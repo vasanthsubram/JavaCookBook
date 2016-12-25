@@ -1,4 +1,4 @@
-package java8.functional;
+package lambda.function.custom;
 
 @FunctionalInterface
 interface Converter<F, T> {

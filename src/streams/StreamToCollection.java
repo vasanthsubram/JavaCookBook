@@ -1,4 +1,4 @@
-package java8.streams;
+package streams;
 
 import java.util.Set;
 import java.util.stream.Collectors;

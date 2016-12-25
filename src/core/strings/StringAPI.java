@@ -76,5 +76,7 @@ public class StringAPI {
 
         System.out.println(new String(new byte[]{65,66,67,68,69}));
         //ABCDE
+
+		System.out.println(String.join(" ", "hello", "java", "world" ));
 	}	
 }
