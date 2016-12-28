@@ -1,18 +1,40 @@
 package core.thread.basic;
 
+/*
+	How can you catch an exception thrown by another thread in Java?
+ */
+
 public class UncaughtExceptionHandlerTest {
 
 	public static void main(String[] args) {
-		Thread.UncaughtExceptionHandler handler  = new Thread.UncaughtExceptionHandler() {
-			public void uncaughtException(Thread t, Throwable e) {
-				System.out.println("Name of the thread:	 " + t.getName());
-				System.out.println("Id of the thread:	 " + t.getId());
-				System.out.println("Message is:		  " + e.getMessage());
+		// create our uncaught exception handler
+		Thread.UncaughtExceptionHandler handler = new Thread.UncaughtExceptionHandler() {
+			public void uncaughtException(Thread th, Throwable ex) {
+				System.out.println("Uncaught exception: " + ex);
 			}
 		};
-		
-		Thread.setDefaultUncaughtExceptionHandler(handler);
-		throw new RuntimeException("Bye Bye from main");
+
+		// create another thread
+		Thread otherThread = new Thread() {
+			public void run() {
+				System.out.println("Sleeping ...");
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					System.out.println("Interrupted.");
+				}
+				System.out.println("Throwing exception ...");
+				throw new RuntimeException();
+			}
+		};
+
+		// set our uncaught exception handler as the one to be used when the new thread
+		// throws an uncaught exception
+		otherThread.setUncaughtExceptionHandler(handler);
+
+		// start the other thread - our uncaught exception handler will be invoked when
+		// the other thread throws an uncaught exception
+		otherThread.start();
 	}
 
 }

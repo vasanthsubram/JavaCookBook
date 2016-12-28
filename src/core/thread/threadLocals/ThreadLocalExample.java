@@ -3,43 +3,38 @@ package core.thread.threadLocals;
 public class ThreadLocalExample {
 
 /*
- * This example creates a single MyRunnable instance which is passed to two 
- * different threads. Both threads execute the run() method, and thus sets 
- * different values on the ThreadLocal instance. 
- * 
- * If the access to the set() call had been synchronized, and it had not been a 
- * ThreadLocal object, the second thread would have overridden the 
- * value set by the first thread. However, since it is a ThreadLocal 
- * object then the two threads cannot see each other's values. 
- * Thus, they set and get different values.
-
+ * This example creates a single MyRunnable instance which is passed to two different threads.
+ *
+ * For non-thread local variable y, the second thread overrides the value set by the first thread.
+ * However, since x it is a ThreadLocal object, the two threads cannot see each other's value, they set and get different values.
+ *
  */
     public static class MyRunnable implements Runnable {
-
-        private ThreadLocal<Integer> threadLocal = new ThreadLocal<Integer>();
+        private ThreadLocal<Double> x = new ThreadLocal<>();
+        private double y;
 
         @Override
         public void run() {
-            threadLocal.set( (int) (Math.random() * 100D) );
-    
-            try {
-                Thread.sleep(2000);
+            synchronized (this) {
+                double d=Math.random();
+                x.set(d);
+                y=d;
+             }
+            try{
+                Thread.sleep(1000);
             } catch (InterruptedException e) {
+                e.printStackTrace();
             }
-    
-            System.out.println(threadLocal.get());
+            System.out.println("Thread id = " + Thread.currentThread().getId() +
+                                        "   x = "  +  x.get() +
+                                        "   y = " + y);
         }
     }
-
 
     public static void main(String[] args) {
         MyRunnable sharedRunnableInstance = new MyRunnable();
 
-        Thread thread1 = new Thread(sharedRunnableInstance);
-        Thread thread2 = new Thread(sharedRunnableInstance);
-
-        thread1.start();
-        thread2.start();
+        new Thread(sharedRunnableInstance).start();
+        new Thread(sharedRunnableInstance).start();
     }
-
 }

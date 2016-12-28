@@ -9,6 +9,7 @@ public class ShutdownHookTest {
 			}
 		};
 		Runtime.getRuntime().addShutdownHook(t);
+		System.out.println("going to shutdown");
 		System.exit(0);
 	}
 
