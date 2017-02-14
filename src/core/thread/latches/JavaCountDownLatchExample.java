@@ -10,8 +10,8 @@ public class JavaCountDownLatchExample {
 		final CountDownLatch latch = new CountDownLatch(2);
 
 		// making two threads for 2 services
-		Thread serviceOneThread = new Thread(new ServiceOne(latch));
-		Thread serviceTwoThread = new Thread(new ServiceTwo(latch));
+		Thread serviceOneThread = new Thread(new Service(latch));
+		Thread serviceTwoThread = new Thread(new Service(latch));
 
 		serviceOneThread.start();
 		serviceTwoThread.start();
@@ -26,6 +26,22 @@ public class JavaCountDownLatchExample {
 			e.printStackTrace();
 		}
 
+	}
+
+	 static class Service implements Runnable{
+
+		private final CountDownLatch latch;
+
+		public Service(CountDownLatch latch) {
+			this.latch = latch;
+		}
+
+		@Override
+		public void run() {
+			System.out.println("Started service");
+			//reduce count of Count Down Latch by 1.
+			latch.countDown();
+		}
 	}
 
 }

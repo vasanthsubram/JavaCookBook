@@ -25,7 +25,7 @@ public class SimpleDeadlock {
 	static Thread  t1 = new Thread(){
 		public void run(){
 			synchronized(lock1){
-				System.out.println("Thread 1 has both lock 1 and going to get lock2");
+				System.out.println("Thread 1 has lock 1 and going to get lock2");
 				putToSleep(this);
 				synchronized (lock2) {
 					System.out.println("Thread 1 has both locks");
@@ -37,7 +37,8 @@ public class SimpleDeadlock {
 	static Thread t2 = new Thread(){
 		public void run(){
 			synchronized(lock2){
-				System.out.println("Thread 2 has both lock 2 and going to get lock1");
+				System.out.println("Thread 2 has lock 2 and going to get lock1");
+				putToSleep(this);
 				synchronized (lock1) {
 					System.out.println("Thread 2 has both locks");
 				}

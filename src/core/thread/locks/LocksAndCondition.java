@@ -18,7 +18,9 @@ public class LocksAndCondition {
 			public  void run(){
 				try{
 					lock.lock();
-					while(binary==1){incCondition.await();}
+					while(binary==1){
+						incCondition.await();
+					}
 					binary++;
 					System.out.println("Inc " + binary);
 					decCondition.signalAll();
@@ -34,7 +36,9 @@ public class LocksAndCondition {
 			public  void run(){
 				try{
 					lock.lock();
-					while(binary==0){decCondition.await();}
+					while(binary==0){
+						decCondition.await();
+					}
 					binary--;
 					System.out.println("Dec " + binary);
 					incCondition.signalAll();

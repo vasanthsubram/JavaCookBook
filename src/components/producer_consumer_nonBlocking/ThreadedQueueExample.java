@@ -14,10 +14,9 @@ public class ThreadedQueueExample {
 
         Thread t1 = new Thread(p);
         Thread t2 = new Thread(c);
-        Thread t3 = new Thread(new Producer(queue));
-
         t1.start();
         t2.start();
-        t3.start();
     }
 }
+
+

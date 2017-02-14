@@ -5,6 +5,10 @@ public class ThreadLocalExample {
 /*
  * This example creates a single MyRunnable instance which is passed to two different threads.
  *
+ * A thread-local is a instance variable of the Runnable but each thread executing the runnable
+  * has a copy of that variable. Even though two threads may share the runnable, they can not see the
+  * other thread's value of that variable
+  *
  * For non-thread local variable y, the second thread overrides the value set by the first thread.
  * However, since x it is a ThreadLocal object, the two threads cannot see each other's value, they set and get different values.
  *

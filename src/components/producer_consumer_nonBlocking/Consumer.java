@@ -21,12 +21,11 @@ public class Consumer implements Runnable {
                     queue.wait();
                 }
             } catch (InterruptedException ex) {
-                Logger.getLogger(Consumer.class.getName()).log(Level.SEVERE, null, ex);
+                ex.printStackTrace();
             }
         }
     }
 
-    //consume all messages
     private void consume() {
         while (!queue.isEmpty()) {
             Message m = queue.poll();

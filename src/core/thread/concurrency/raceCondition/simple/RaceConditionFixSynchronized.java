@@ -16,10 +16,6 @@ public class RaceConditionFixSynchronized {
 		};
 		(new Thread(t)).start();
 		(new Thread(t)).start();
-//		(new Thread(t)).start();
-//		(new Thread(t)).start();
-//		(new Thread(t)).start();
-//		(new Thread(t)).start();
 	}
 
 	public static synchronized int getNext() throws Exception {
