@@ -6,4 +6,5 @@ package _scratch;
 public class Scratch1 {
 
     //Test 1
+    //Test 2
 }
