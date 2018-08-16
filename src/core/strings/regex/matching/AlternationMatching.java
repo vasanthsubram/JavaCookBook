@@ -8,5 +8,10 @@ public class AlternationMatching {
 		//match cat or dog
 		assertTrue("cat".matches("cat|dog"));
 		assertTrue("dog".matches("cat|dog"));
+
+//		assertTrue("MDP.TRAVELOCITY-ZA.META.HPA.CORESEARCH-LOCALUNIVERSAL.HOTEL".matches("/.*\\.TRAVELOCITY-([a-zA-Z]{2})\\.META\\.HPA\\..*/i"));
+
+		assertTrue("MDP.TRAVELOCITY-ZA.META.HPA".matches("/[a-zA-Z]{3[]}\\.TRAVELOCITY-[a-zA-Z]{2}\\.META\\.HPA/i"));
+
 	}
 }
