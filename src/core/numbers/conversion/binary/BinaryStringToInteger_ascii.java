@@ -4,8 +4,8 @@ import static org.junit.Assert.assertEquals;
 public class BinaryStringToInteger_ascii {
 
 	public static void main(String[] args) {
-		String input = "111111111";		
-		long result = convert(input);
+		String input = "00110010";
+		char result = (char)convert(input);
 		System.out.println("original input = " + input);
 		System.out.println("integer value is " + result);
 		assertEquals(Long.toBinaryString(result),input);

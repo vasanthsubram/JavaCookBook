@@ -3,9 +3,11 @@ package core.numbers.conversion.binary;
 public class IntegerToBinaryString_BitShift {
 
 	public static void main(String args[]) {
-		for (byte i=0; i <= 127 && i>=0; i++) {
-			System.out.println(i+ "\t" +toBinaryString(i));
-		}
+//		for (byte i=0; i <= 127 && i>=0; i++) {
+//			System.out.println(i+ "\t" +toBinaryString(i));
+//		}
+		byte b='x';
+		System.out.println(toBinaryString(b));
 	}
 
 	public static String toBinaryString(byte x) {

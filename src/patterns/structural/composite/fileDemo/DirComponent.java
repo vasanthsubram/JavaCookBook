@@ -10,12 +10,11 @@ public class DirComponent extends FileSystemComponent {
 		super(cName);
 	}
 
-	public void addComponent(FileSystemComponent fc) throws CompositeException {
+	public void addComponent(FileSystemComponent fc){
 		dirContents.add(fc);
 	}
 
-	public FileSystemComponent getComponent(int location)
-			throws CompositeException {
+	public FileSystemComponent getComponent(int location){
 		return (FileSystemComponent) dirContents.elementAt(location);
 	}
 
@@ -23,8 +22,7 @@ public class DirComponent extends FileSystemComponent {
 		long sizeOfAllFiles = 0;
 		Enumeration e = dirContents.elements();
 		while (e.hasMoreElements()) {
-			FileSystemComponent component = (FileSystemComponent) e
-					.nextElement();
+			FileSystemComponent component = (FileSystemComponent) e.nextElement();
 			sizeOfAllFiles = sizeOfAllFiles + (component.getComponentSize());
 		}
 		return sizeOfAllFiles;

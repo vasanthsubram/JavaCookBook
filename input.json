@@ -1,0 +1,114 @@
+{
+  "configName": "GA-E2E-TestModeOff",
+  "description": "Testing UIS Message E2E",
+  "enigmaLoggingEnabled": "true",
+  "owners": [
+    "MTT OMG",
+    "Others"
+  ],
+  "gdprEssential": "true",
+  "dateCreated": "1514761206001",
+  "dateModified": "1514761206111",
+  "testModeEnabled": "false",
+  "httpEndPoint": "https://marketing-datastream-service-test-endpoint.us-west-2.test.expedia.com/api/testendpoint/",
+  "httpMethod": "POST",
+  "httpHeaders": {
+    "content-length": "500",
+    "content-type": "application/json"
+  },
+  "dataSource": "uis",
+  "customDataSource": "",
+  "lookupTableMap": {
+    "countries": {
+      "EU": "Europe",
+      "MX": "Mexico",
+      "US": "America"
+    },
+    "pos": {
+      "100": "travelocity",
+      "200": "homeaway"
+    }
+  },
+  "fieldConfigurations": [
+    {
+      "sourceFieldName": "context.user.guid",
+      "required": true,
+      "destinationFieldName": "guid",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "context.site.siteId",
+      "required": true,
+      "destinationFieldName": "siteId",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "context.site.eapid",
+      "required": true,
+      "destinationFieldName": "eapid",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "context.site.siteName",
+      "required": true,
+      "destinationFieldName": "siteName",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "context.site.tpid",
+      "required": true,
+      "destinationFieldName": "tpid",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "entity.checkout.hotel.checkOutDate",
+      "required": true,
+      "destinationFieldName": "checkOutDate",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "entity.checkout.hotel.checkInDate",
+      "required": true,
+      "destinationFieldName": "checkInDate",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "utcTimestamp",
+      "required": true,
+      "destinationFieldName": "utcTimestamp",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "pageInfo.funnelLocation",
+      "required": true,
+      "destinationFieldName": "funnelLocation",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    },
+    {
+      "sourceFieldName": "pageInfo.xLineOfBusiness",
+      "required": true,
+      "destinationFieldName": "xLineOfBusiness",
+      "fieldTransformation": {
+        "type": "DefaultTransformation"
+      }
+    }
+  ]
+}
