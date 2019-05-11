@@ -1,4 +1,4 @@
-package design.vendingmachine;
+package design.vendingmachine.exceptions;
 
 public class NotFullPaidException extends RuntimeException {
   private String message;

@@ -1,5 +1,11 @@
 package design.vendingmachine;
 
+import design.vendingmachine.enums.Coin;
+import design.vendingmachine.enums.Item;
+import design.vendingmachine.exceptions.NotFullPaidException;
+import design.vendingmachine.exceptions.NotSufficientChangeException;
+import design.vendingmachine.exceptions.SoldOutException;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

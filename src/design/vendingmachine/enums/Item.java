@@ -1,4 +1,4 @@
-package design.vendingmachine;
+package design.vendingmachine.enums;
 
 public enum Item {
   COKE("Coke", 25), PEPSI("Pepsi", 35), SODA("Soda", 45);

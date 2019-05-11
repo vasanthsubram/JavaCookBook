@@ -1,5 +1,8 @@
 package design.vendingmachine;
 
+import design.vendingmachine.enums.Coin;
+import design.vendingmachine.enums.Item;
+
 import java.util.List;
 
 public interface VendingMachine {

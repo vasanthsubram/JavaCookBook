@@ -1,4 +1,4 @@
-package design.vendingmachine;
+package design.vendingmachine.exceptions;
 
 public class NotSufficientChangeException extends RuntimeException {
   private String message;
