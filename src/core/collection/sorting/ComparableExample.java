@@ -17,6 +17,7 @@ public class ComparableExample {
     Collections.sort(list);
 
     System.out.println(list);
+
   }
 }
 
@@ -34,15 +35,12 @@ class Employee implements Comparable<Employee> {
   }
 
   @Override
-  public int compareTo(Employee o)
-  {
+  public int compareTo(Employee o) {
     return this.getId().compareTo( o.getId() );
   }
 
   @Override
   public String toString() {
-    return "Employee{" +
-          "id=" + id +
-          '}';
+    return "Employee{" + "id=" + id + '}';
   }
 }
