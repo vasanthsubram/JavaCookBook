@@ -1,4 +1,4 @@
-package core.collection.implementations;
+package core.collection.demos;
 
 import java.util.Comparator;
 import java.util.TreeMap;

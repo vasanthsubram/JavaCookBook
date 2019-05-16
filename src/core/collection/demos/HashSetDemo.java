@@ -1,4 +1,4 @@
-package core.collection.implementations;
+package core.collection.demos;
 
 import java.util.HashSet;
 import java.util.Set;

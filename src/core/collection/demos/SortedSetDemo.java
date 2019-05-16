@@ -1,4 +1,4 @@
-package core.collection.implementations;
+package core.collection.demos;
 
 import java.util.SortedSet;
 import java.util.TreeSet;

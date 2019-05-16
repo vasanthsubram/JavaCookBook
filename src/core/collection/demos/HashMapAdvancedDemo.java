@@ -1,9 +1,9 @@
-package core.collection.implementations;
+package core.collection.demos;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MapsJava8 {
+public class HashMapAdvancedDemo {
 
 	public static void main(String[] args) {
 		Map<Integer, String> map = new HashMap<>();

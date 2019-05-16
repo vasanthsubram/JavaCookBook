@@ -1,7 +1,6 @@
-package core.collection.implementations;
+package core.collection.demos;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 
 public class HashMapDemo {
@@ -31,20 +30,13 @@ public class HashMapDemo {
 		System.out.println(map.get("Heaven"));
 		System.out.println(map.get("Hell"));
 		
-		Iterator<String> it = map.keySet().iterator();
-		while (it.hasNext()) {
-			String s = it.next();
-			//key could be null
-			if (s != null) {
-				if (s.equals("Heaven") | (s.equals("Hell"))) {
-					//while iterating through iterator, remove using the iterator
-					//in this case the set returned by keySet() is backed by the map
-					//therefore removing through the iterator deletes the key-value pair in the map
-					it.remove();
-				}
-			}
-		}		
+
 		map.remove(null);
 		System.out.println(map);
+
+		if(map.containsKey("USA")) System.out.println("USA is present");
+		if(map.containsValue("London")) System.out.println("London is present");
+
+
 	}
 }
