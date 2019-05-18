@@ -2,7 +2,7 @@ package lambda.function;
 
 import java.util.function.Function;
 
-public class FunctionExample1 {
+public class FunctionExample {
 
 		public static void main(String[] args) {
 			//Represents a function that accepts one argument and produces a result.
