@@ -12,10 +12,9 @@ public class GenericTest {
 
     public static void main(String args[]) throws Exception {
 
-    	List<Number> numList1;
-    	//numList1 = new  ArrayList<Integer>();        //error
-    	
-    	List<? extends Number> numList2 =new ArrayList<Integer>();  //OK
+    	// List<Number> numList = new  ArrayList<Integer>();        //error
+		List<? extends Number> numList2 =new ArrayList<Integer>();  //OK
+		//List<? extends Number> list2 = new ArrayList<String>();  // error
 
     	//cannot create instances of wildcard parameterized types {? cannot appear in new)
     	// List<?> anyList = new ArrayList<?>();
@@ -27,7 +26,7 @@ public class GenericTest {
     	Map<String,?> pair = new HashMap<String,String>();
 
 
-    	//List<? extends Number> list2 = new ArrayList<String>();  // error
+
 
     }
 }

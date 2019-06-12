@@ -1,4 +1,7 @@
-package patterns.behavioural.state;
+package patterns.behavioural.state.states;
+
+import patterns.behavioural.state.DeliveryContext;
+import patterns.behavioural.state.PackageState;
 
 public class OutForDelivery implements PackageState {
   //Singleton

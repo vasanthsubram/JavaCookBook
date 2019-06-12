@@ -1,45 +1,49 @@
 package patterns.creational;
 
-import org.apache.commons.lang.builder.ToStringBuilder;
-import org.apache.commons.lang.builder.ToStringStyle;
-
 /**
  * Instead of having multiple constructors, each taking different sets of arguments, use the builder
  */
 public class NutritionalFacts {
-  private final int sodium;
+  private final int servingSize;
+  private final int servings;
+  private final int calories;
   private final int fat;
-  private final int carbo;
-
-  public int getSodium(){
-    return sodium;
-  }
-
-  public int getFat(){
-    return fat;
-  }
-
-  public int getCarbo(){
-    return carbo;
-  }
+  private final int sodium;
+  private final int carbohydrate;
 
   public static class Builder {
-    private int sodium;
-    private int fat;
-    private int carbo;
+    // Required parameters
+    private final int servingSize;
+    private final int servings;
 
-    public Builder sodium(int s) {
-      this.sodium = s;
+    // Optional parameters - initialized to default values
+    private int calories = 0;
+    private int fat = 0;
+    private int carbohydrate = 0;
+    private int sodium = 0;
+
+    public Builder(int servingSize, int servings) {
+      this.servingSize = servingSize;
+      this.servings = servings;
+    }
+
+    public Builder calories(int val) {
+      calories = val;
       return this;
     }
 
-    public Builder fat(int f) {
-      this.fat = f;
+    public Builder fat(int val) {
+      fat = val;
       return this;
     }
 
-    public Builder carbo(int c) {
-      this.carbo = c;
+    public Builder carbohydrate(int val) {
+      carbohydrate = val;
+      return this;
+    }
+
+    public Builder sodium(int val) {
+      sodium = val;
       return this;
     }
 
@@ -48,19 +52,32 @@ public class NutritionalFacts {
     }
   }
 
-  private NutritionalFacts(Builder b) {
-    this.sodium = b.sodium;
-    this.fat = b.fat;
-    this.carbo = b.carbo;
+  private NutritionalFacts(Builder builder) {
+    servingSize = builder.servingSize;
+    servings = builder.servings;
+    calories = builder.calories;
+    fat = builder.fat;
+    sodium = builder.sodium;
+    carbohydrate = builder.carbohydrate;
   }
 
-  public String toString(){
-    return ToStringBuilder.reflectionToString(this, ToStringStyle.SHORT_PREFIX_STYLE);
+  @Override
+  public String toString() {
+    return "NutritionalFacts{" +
+          "servingSize=" + servingSize +
+          ", servings=" + servings +
+          ", calories=" + calories +
+          ", fat=" + fat +
+          ", sodium=" + sodium +
+          ", carbohydrate=" + carbohydrate +
+          '}';
   }
 
   public static void main(String[] args){
-    NutritionalFacts n = new NutritionalFacts.Builder().sodium(10).carbo(15).
-          fat(5).build();
-    System.out.println(n);
+    NutritionalFacts cocaCola = new NutritionalFacts.Builder(240, 8).
+          calories(100).sodium(35).carbohydrate(27).build(); cocaCola = new NutritionalFacts.Builder(240, 8).
+          calories(100).sodium(35).carbohydrate(27).build();
+
+    System.out.println(cocaCola);
   }
 }

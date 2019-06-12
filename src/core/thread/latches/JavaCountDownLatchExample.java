@@ -39,8 +39,10 @@ public class JavaCountDownLatchExample {
 		@Override
 		public void run() {
 			System.out.println("Started service");
+			System.out.println("start latch count = " + latch.getCount());
 			//reduce count of Count Down Latch by 1.
 			latch.countDown();
+			System.out.println("end latch count = " + latch.getCount());
 		}
 	}
 

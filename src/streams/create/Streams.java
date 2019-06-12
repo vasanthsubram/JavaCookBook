@@ -3,6 +3,7 @@ package streams.create;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Streams {
@@ -22,6 +23,9 @@ public class Streams {
 		Stream.of(1, 2, 3, 4).forEach(System.out::println);
 		Stream.of("A,B,C".split(",")).forEach(System.out::println);
 		Stream.of(new String[]{"A1", "B1"}).forEach(System.out::println);
+
+		IntStream integerStream = IntStream.of(1, 2, 3, 4);
+//		System.out.println("greater than 2 " + integerStream.filter(v->v>2).collect();
 
 
 		//Stream.builder()
