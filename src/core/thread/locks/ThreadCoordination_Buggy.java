@@ -1,6 +1,11 @@
 package core.thread.locks;
 
-public class ThreadCoordination {
+/**
+ * This program demonstrates a classic concurrency bug.
+ * If t1 completes even before t2 can start, then t2 will wait forever.
+ *  This is because t2 will miss the notifyAll notification of t1
+ */
+public class ThreadCoordination_Buggy {
 
 	static final Object lock = new Object();		//this is important. The two threads must synchronize on a common object
 	
@@ -35,7 +40,9 @@ public class ThreadCoordination {
 			}
 		};
 		
-		new Thread(r2).start();
-		new Thread(r1).start();
+		Thread t1 = new Thread(r1);
+		Thread t2 = new Thread(r2);
+		t1.start();
+		t2.start();
 	}
 }
