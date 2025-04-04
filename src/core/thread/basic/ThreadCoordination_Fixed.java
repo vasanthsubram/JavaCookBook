@@ -1,4 +1,4 @@
-package core.thread.locks;
+package core.thread.basic;
 
 public class ThreadCoordination_Fixed {
 

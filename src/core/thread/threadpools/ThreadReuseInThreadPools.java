@@ -1,19 +1,19 @@
 package core.thread.threadpools;
 import java.util.concurrent.*;
 
+//The thread blocks — enters TIMED_WAITING state.
+//That thread cannot be reused for other tasks during sleep.
+//So, while a task is sleeping, the pool can’t assign it new work.
+
 public class ThreadReuseInThreadPools {
     public static void main(String[] args) {
         int numWorkers = 4;
         int threadPoolSize = 2;
         
-        ExecutorService tpes =
-            Executors.newFixedThreadPool(threadPoolSize);
-        WorkerThread[] workers = new WorkerThread[numWorkers];
+        ExecutorService tpes = Executors.newFixedThreadPool(threadPoolSize);
         for (int i = 0; i < numWorkers; i++) {
-            workers[i] = new WorkerThread(i);
-            tpes.execute(workers[i]);
+            tpes.execute(new WorkerThread(i));
         }
-       
         tpes.shutdown();
     }
 }

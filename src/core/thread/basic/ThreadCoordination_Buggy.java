@@ -1,4 +1,4 @@
-package core.thread.locks;
+package core.thread.basic;
 
 /**
  * This program demonstrates a classic concurrency bug.

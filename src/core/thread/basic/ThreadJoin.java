@@ -1,16 +1,8 @@
 package core.thread.basic;
 
-/**
- * This example shows how to spawn a thread and wait till the child thread
- * finishes.
- * 
- * @author chq-vasanthakumars
- * 
- */
+// This example shows how to spawn a thread and wait till the child thread finishes.
 public class ThreadJoin {
-
 	public static void main(String args[]) {
-
 		Runnable r1 = new Runnable() {
 			public void run() {
 				System.out.println("\t Inside the child thread - Start.");
@@ -28,7 +20,7 @@ public class ThreadJoin {
 			System.out.println("Main thread - Waiting for the child thread to finish");
 			t.start();
 			
-			// this thread will till 't' finishes
+			// the main thread will till 't' finishes
 			t.join();
 			System.out.println("Main thread -  child thread is Done");
 		} catch (InterruptedException ex) {
