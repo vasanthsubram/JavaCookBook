@@ -1,4 +1,4 @@
-package core.array;
+package core.collection.array;
 
 import org.apache.commons.lang3.ArrayUtils;
 

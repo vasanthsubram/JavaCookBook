@@ -29,6 +29,10 @@ public class ComparatorUsage {
     Collections.sort(list, SortBySize);
     System.out.println(list);
 
+    //reverse the comparator
+    Collections.sort(list, SortBySize.reversed());
+    System.out.println(list);
+
   }
 }
 

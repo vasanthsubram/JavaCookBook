@@ -2,12 +2,8 @@ package core.collection.array;
 
 import java.util.Arrays;
 
-/**
- * Easier way to print any array, instead of looping through the elements
- * 
- * @author chq-vasanthakumars
- * 
- */
+//Easier way to print any array, instead of looping through the elements
+
 public class PrintingArray {
 	
 	public static void main(String[] args) {

@@ -1,6 +1,5 @@
 package core.collection.array;
 
-import java.util.Arrays;
 import java.util.List;
 
 public class ArrayCreation {
@@ -16,5 +15,18 @@ public class ArrayCreation {
 		arr3[0]=1;
 		arr3[1]=2;
 		arr3[2]=3;
+
+		Integer[] intArr1 = List.of(1,2,3).toArray(new Integer[0]);
+
+		//int[] intArr2 = List.of(1, 2, 3).toArray(new int[0]);
+		// Because List.of(1, 2, 3) creates a List<Integer>, and the toArray(T[] a) method
+		// only works with reference types — not with primitive types like int.
+
+
+		int[] intArr = List.of(1,2,3).stream().mapToInt(Integer::intValue).toArray();
+		// Print the array
+		for (int num : intArr) {
+			System.out.print(num + " ");
+		}
 	}
 }

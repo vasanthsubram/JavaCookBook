@@ -8,22 +8,18 @@ public class AtomicBooleanTest {
 	public static void main(String[] args) throws Exception {
 
 		
-			Runnable r1 = new Runnable() {
-				public void run(){
+			Runnable r1 =  () -> {
 					long id=Thread.currentThread().getId();
-					System.out.println("Inital value =  " + id + "  " + aBoolean);
+					System.out.println("Thread id =  " + id + " Before compare = " + aBoolean);
 					aBoolean.compareAndSet(false, true);
-					System.out.println("Final value =  " + id + "  " + aBoolean);
-				}
+					System.out.println("Thread id =  " + id + " After compare = " + aBoolean);
 			};
 			
-			Runnable r2 = new Runnable() {
-				public void run(){
+			Runnable r2 = () -> {
 					long id=Thread.currentThread().getId();
-					System.out.println("Inital value =  " + id + "  " + aBoolean);
+					System.out.println("Thread id =  " + id + " Before compare = " + aBoolean);
 					aBoolean.compareAndSet(true, false);
-					System.out.println("Final value =  " + id + "  " + aBoolean);
-				}
+					System.out.println("Thread id =  " + id + " After compare = " + aBoolean);
 			};
 			
 			for(int i=0;i<1;i++){

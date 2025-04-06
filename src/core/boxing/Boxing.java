@@ -6,14 +6,14 @@ import java.util.List;
 public class Boxing {
 
 	public static void main(String args[]){
-		Integer i = new Integer(9);
-		Integer j = new Integer(13);
+		Integer i =  Integer.valueOf(9);
+		Integer j =  Integer.valueOf(13);
 		Integer k = i + j;
 	
-                Integer integerYear = new Integer(1989);
+                Integer integerYear =  Integer.valueOf(1989);
                 Integer otherIntegerYear = integerYear + 10;
                 //Integer object is unboxed and added to an int
-                int intYear = integerYear + new Integer(15);
+                int intYear = integerYear +  Integer.valueOf(15);
                 System.out.println(intYear);
                  //Integer object is unboxed and assigned to an int
 		Integer in = 10;

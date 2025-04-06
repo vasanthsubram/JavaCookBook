@@ -1,10 +1,10 @@
-package core.array;
+package core.collection.array;
 
 import utils.Employee;
 
 import java.util.Arrays;
 
-public class CopyArray {
+public class CopyArray2 {
 
   public static void main(String[] args){
     int[] arr = {1,2,3};
