@@ -1,4 +1,4 @@
-package collection_lambda.collection.apacheCollectionUtils.predicates;
+package collections.apacheCollectionUtils.predicates;
 
 import java.util.Arrays;
 import java.util.Collection;

@@ -1,4 +1,4 @@
-package collection_lambda.collection.zz_SmarterIterator;
+package collections.zz_SmarterIterator;
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Collection;

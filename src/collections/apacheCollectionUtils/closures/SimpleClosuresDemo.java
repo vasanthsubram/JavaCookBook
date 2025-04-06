@@ -1,4 +1,4 @@
-package collection_lambda.collection.apacheCollectionUtils.closures;
+package collections.apacheCollectionUtils.closures;
 
 import java.util.Arrays;
 import java.util.List;

@@ -1,4 +1,4 @@
-package collection_lambda.collection.zz_smartIterator;
+package collections.zz_smartIterator;
 import java.util.*;
 
 /**

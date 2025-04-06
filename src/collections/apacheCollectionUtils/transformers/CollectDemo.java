@@ -1,9 +1,10 @@
-package collection_lambda.collection.apacheCollectionUtils.transformers;
+package collections.apacheCollectionUtils.transformers;
 
 import java.util.Collection;
+
+import collections.apacheCollectionUtils.closures.PrintIt;
 import org.apache.commons.collections.CollectionUtils;
 import org.apache.commons.collections.TransformerUtils;
-import collection_lambda.collection.apacheCollectionUtils.closures.PrintIt;
 import java.util.Arrays;
 import java.util.List;
 

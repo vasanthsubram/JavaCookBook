@@ -1,4 +1,4 @@
-package collection_lambda.collection.apacheCollectionUtils.closures;
+package collections.apacheCollectionUtils.closures;
 
 import org.apache.commons.collections.Closure;
 

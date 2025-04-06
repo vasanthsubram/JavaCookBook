@@ -1,4 +1,4 @@
-package collection_lambda.collection.apacheCollectionUtils.predicates;
+package collections.apacheCollectionUtils.predicates;
 
 import core.comparator.Compare;
 import core.enums.CompOp;
