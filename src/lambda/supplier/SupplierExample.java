@@ -7,17 +7,11 @@ import java.util.function.Supplier;
  */
 public class SupplierExample {
 
-    static void display(Supplier<Integer> arg) {
-        System.out.println(arg.get());
-    }
-
     public static void main(String[] args) {
+        Supplier<Integer> supplier = () -> 42;
+        System.out.println(supplier.get());
 
-        // Pass lambdas to the display method.
-        // ... These conform to the Supplier class.
-        // ... Each returns an Integer.
-        display(() -> 10);
-        display(() -> 100);
-        display(() -> (int) (Math.random() * 100));
+        Supplier<String> helloSupplier = () -> "Hello, World!";
+        System.out.println(helloSupplier.get());
     }
 }

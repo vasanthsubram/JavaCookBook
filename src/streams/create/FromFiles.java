@@ -12,7 +12,7 @@ public class FromFiles {
     public static void main(String args[]) throws IOException {
 
         //stream from a file
-        long numberOfLines = Files.lines(Paths.get("src/lambda/streams/Streams.java"), Charset.defaultCharset()).count();
+        long numberOfLines = Files.lines(Paths.get("src/collection_lambda.collection.lambda/streams/Streams.java"), Charset.defaultCharset()).count();
         System.out.println("Number of lines in this file = " + numberOfLines);
 
     }

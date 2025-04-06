@@ -20,7 +20,7 @@ public class FlatMapTest {
 		System.out.println(list);
 
 		//list files and directories and files in the subdirectory
-		Stream<File> fileStream = Stream.of(new File("./src/lambda/").listFiles());
+		Stream<File> fileStream = Stream.of(new File("./src/collection_lambda.collection.lambda/").listFiles());
 		fileStream.flatMap(file -> file.listFiles() == null ? Stream.of(file) : Stream.of(file.listFiles()))
 				.forEach(System.out::println);
 	}

@@ -5,7 +5,7 @@ import java.util.function.Consumer;
 import utils.Employee;
 
 //Consumers represents operations to be performed on a single input argument.
-
+//Accepts one Argument and eturns nothing.
 public class ConsumerTest {
 	public static void main(String[] args) {
 	

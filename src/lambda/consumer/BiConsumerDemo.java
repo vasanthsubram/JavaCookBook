@@ -2,9 +2,7 @@ package lambda.consumer;
 
 import java.util.HashMap;
 
-/**
- * Created by vasanthakumarsubramanian on 12/25/16.
- */
+//Consumers represents operations to be performed on a two input arguments.
 public class BiConsumerDemo {
     public static void main(String[] args) {
 
@@ -12,7 +10,7 @@ public class BiConsumerDemo {
         hash.put("cat", "orange");
         hash.put("dog", "black");
         hash.put("snake", "green");
-        // Use lambda expression that matches BiConsumer to display HashMap.
-        hash.forEach((string1, string2) -> System.out.println(string1 + "..." + string2 + ", " + string1.length()));
+        // Use collection_lambda.collection.lambda expression that matches BiConsumer to display HashMap.
+        hash.forEach((string1, string2) -> System.out.println(string1 + "..." + string2));
     }
 }
