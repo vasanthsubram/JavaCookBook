@@ -1,4 +1,4 @@
-package collection_lambda.collection.iterators;
+package collections.iterators;
 
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -54,21 +54,16 @@ public class ReversedIterator<T> implements Iterable<T> {
 		list.add("Second");
 		list.add("Third");
 
+        for (String s : list) {
+            System.out.println(s);
+        }
+        System.out.println();
+
 		ReversedIterator<String> reversedList = new ReversedIterator<String>(list);
 
 		// for-each syntax
 		for (String s : reversedList) {
-			System.out.println(s);
-		}
-
-		System.out.println("");
-
-		// iterator syntax
-		Iterator<String> iterator = reversedList.iterator();
-		while (iterator.hasNext()) {
-			System.out.println(iterator.next());
-		}
-
+            System.out.println(s);
+        }
 	}
-  
 }

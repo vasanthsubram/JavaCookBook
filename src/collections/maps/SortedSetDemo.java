@@ -1,4 +1,4 @@
-package collection_lambda.collection.demos;
+package collections.maps;
 
 import java.util.SortedSet;
 import java.util.TreeSet;

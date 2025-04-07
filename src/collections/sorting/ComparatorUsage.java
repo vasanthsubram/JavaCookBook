@@ -1,4 +1,4 @@
-package collection_lambda.collection.sorting;
+package collections.sorting;
 
 import java.util.Arrays;
 import java.util.Collections;
@@ -32,6 +32,7 @@ public class ComparatorUsage {
     //reverse the comparator
     Collections.sort(list, SortBySize.reversed());
     System.out.println(list);
+
 
   }
 }

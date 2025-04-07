@@ -1,4 +1,4 @@
-package java7;
+package core;
 
 import java.io.DataOutputStream;
 import java.io.FileOutputStream;
@@ -8,7 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Basic {
+public class Java7Changes {
 
 	public static void main(String[] args) {
 		

@@ -1,4 +1,4 @@
-package collection_lambda.collection.iterators;
+package collections.iterators;
 
 import java.util.Collection;
 import java.util.Iterator;
