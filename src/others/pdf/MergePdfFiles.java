@@ -1,10 +1,9 @@
-package pdf;
+package others.pdf;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.pdf.PdfCopy;
 import com.lowagie.text.pdf.PdfReader;
-import com.lowagie.text.pdf.PdfWriter;
-import java.io.ByteArrayOutputStream;
+
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -16,12 +15,12 @@ public class MergePdfFiles {
 
     public static void main(String[] args) throws Exception {
         List<InputStream> componentFiles = new ArrayList<InputStream>();
-        componentFiles.add(new FileInputStream(new File("output/1000.pdf")));
-        componentFiles.add(new FileInputStream(new File("output/1000 (3).pdf")));
-        componentFiles.add(new FileInputStream(new File("output/1000 (2).pdf")));
-        componentFiles.add(new FileInputStream(new File("output/1000 (1).pdf")));
+        componentFiles.add(new FileInputStream(new File("output/1000.others.pdf")));
+        componentFiles.add(new FileInputStream(new File("output/1000 (3).others.pdf")));
+        componentFiles.add(new FileInputStream(new File("output/1000 (2).others.pdf")));
+        componentFiles.add(new FileInputStream(new File("output/1000 (1).others.pdf")));
 
-        FileOutputStream singlePdf = new FileOutputStream("output/single_pdf.pdf");
+        FileOutputStream singlePdf = new FileOutputStream("output/single_pdf.others.pdf");
         // Concatenate the separate pages into a single PDF document
         Document doc = new Document();
         PdfCopy copier = new PdfCopy(doc, singlePdf);

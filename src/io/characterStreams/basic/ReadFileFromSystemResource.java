@@ -18,7 +18,9 @@ public class ReadFileFromSystemResource {
 			fail();
 		} finally{
 			try {
-				reader.close();
+				if (reader != null) {
+					reader.close();
+				}
 			} catch (IOException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();

@@ -1,4 +1,4 @@
-package cglib;
+package others.cglib;
 
 import java.lang.reflect.Method;
 

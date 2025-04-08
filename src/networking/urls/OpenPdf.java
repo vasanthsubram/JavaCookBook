@@ -6,7 +6,7 @@ import java.io.File;
 public class OpenPdf {
     public static void main(String[] args) {
         try {
-            File pdfFile = new File("c:/rail.pdf");
+            File pdfFile = new File("c:/rail.others.pdf");
             if (pdfFile.exists()) {
                 if (Desktop.isDesktopSupported()) {
                     Desktop.getDesktop().open(pdfFile);

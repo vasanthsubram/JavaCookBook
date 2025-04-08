@@ -1,4 +1,4 @@
-package cglib;
+package others.cglib;
 
 import net.sf.cglib.proxy.Enhancer;
 import net.sf.cglib.proxy.NoOp;

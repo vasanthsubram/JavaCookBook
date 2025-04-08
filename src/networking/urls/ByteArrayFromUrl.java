@@ -18,7 +18,7 @@ public class ByteArrayFromUrl {
         try {
             // Create a URL for the desired doc
             URL url = new URL("file:///c:/tmuninst.ini");
-//            File f= new File("c:/rail.pdf");
+//            File f= new File("c:/rail.others.pdf");
 //            f.toURI();
             // Read all the text returned by the server
             BufferedInputStream in = new BufferedInputStream(url.openStream());

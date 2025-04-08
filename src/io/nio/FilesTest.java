@@ -10,7 +10,7 @@ import static java.nio.file.StandardOpenOption.*;
 public class FilesTest {
 
 		public static void main(String[] args) throws IOException {
-			Path dir=Paths.get("c:/temp");
+			Path dir=Paths.get("temp");
 			if (!Files.exists(dir)) {
 				dir = Files.createDirectory(dir);
 			}

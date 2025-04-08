@@ -1,4 +1,4 @@
-package cglib;
+package others.cglib;
 
 class TargetClass{
     

@@ -1,11 +1,11 @@
-package pdf;
+package others.pdf;
 
 import com.lowagie.text.Document;
 import com.lowagie.text.Font;
 import com.lowagie.text.PageSize;
 import com.lowagie.text.Paragraph;
 import com.lowagie.text.pdf.PdfWriter;
-import java.io.ByteArrayOutputStream;
+
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
@@ -41,22 +41,22 @@ public class SimplePdfMaker {
             pdfWriter.close();
 
         } catch (Exception ex) {
-            throw new Exception("Error occurred generating pdf", ex);
+            throw new Exception("Error occurred generating others.pdf", ex);
         }
     }
 
     public static void main(String[] args) throws Exception{
         String str = "A problem well stated is a problem half solved";
-        new SimplePdfMaker(str).toPdf(new FileOutputStream("output/0000001000.pdf"));
+        new SimplePdfMaker(str).toPdf(new FileOutputStream("output/0000001000.others.pdf"));
         
         String str1 = "If the human mind was simple enough to understand, we'd be too simple to understand it";
-        new SimplePdfMaker(str1).toPdf(new FileOutputStream("output/0000001000 (1).pdf"));
+        new SimplePdfMaker(str1).toPdf(new FileOutputStream("output/0000001000 (1).others.pdf"));
 
         String str2 = "To Iterate is Human, to Recurse, Divine.";
-        new SimplePdfMaker(str2).toPdf(new FileOutputStream("output/0000001000 (2).pdf"));
+        new SimplePdfMaker(str2).toPdf(new FileOutputStream("output/0000001000 (2).others.pdf"));
 
         String str3 = "On the 7th day God began debugging";
-        new SimplePdfMaker(str3).toPdf(new FileOutputStream("output/0000001000 (3).pdf"));
+        new SimplePdfMaker(str3).toPdf(new FileOutputStream("output/0000001000 (3).others.pdf"));
 
     }
     
