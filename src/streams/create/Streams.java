@@ -1,8 +1,7 @@
 package streams.create;
 
 import java.io.IOException;
-import java.util.Arrays;
-import java.util.Date;
+import java.util.*;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -47,5 +46,14 @@ public class Streams {
 		Stream<Integer> intStream = Stream.iterate(0, n -> n+1).limit(10);
 		Integer[] intArr = intStream.toArray(Integer[]::new);
 		System.out.println(Arrays.toString(intArr));
+
+
+		Map<String, Integer> map = new HashMap<>();
+		map.put("Apple", 3);
+		map.put("Banana", 2);
+		map.put("Orange", 5);
+
+
+
 	}
 }

@@ -12,7 +12,7 @@ public class MapDemo {
         List<String> strList = Arrays.asList("1","2","3");
         //maps the Integer(String) constructor on to each element of strList
 //        List<Integer> intList = strList.stream().map(Integer::new).collect(Collectors.toList());
-        List<Integer> intList = strList.stream().map(x ->(new Integer(x))).collect(Collectors.toList());
+        List<Integer> intList = strList.stream().map(x ->( Integer.parseInt(x))).collect(Collectors.toList());
 
         System.out.println(strList);
         System.out.println(intList);

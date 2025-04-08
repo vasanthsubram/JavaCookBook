@@ -15,6 +15,7 @@ public class MethodReferenceDemo {
     List<Integer> list = Arrays.asList(1, 2, 3);
 
     //forEach accepts a Consumer
+    list.forEach(e -> System.out.println(e));
     list.forEach(System.out::println);
 
     //reference to a static method
