@@ -1,7 +1,7 @@
 package collections.maps;
 
-import java.util.Iterator;
-import java.util.TreeMap;
+import java.util.*;
+
 
 public class SortedMapDemo {
 
@@ -20,12 +20,19 @@ public class SortedMapDemo {
 		System.out.println(map.values());
 		System.out.println(map.comparator());
 
-		System.out.println(" *** regular iteration");
+		System.out.println(" *** Iterator");
 		Iterator it = map.keySet().iterator();
 		while(it.hasNext()){
 			System.out.println(it.next());
 		}
-		
+
+
+		System.out.println("** for interation");
+		for (Map.Entry<String, String> entry : map.entrySet()) {
+			System.out.println(entry.getKey() + ": " + entry.getValue());
+		}
+
+
 		/*
 		 * TreeMap implements NavigableMap interface and following methods are
 		 * available
