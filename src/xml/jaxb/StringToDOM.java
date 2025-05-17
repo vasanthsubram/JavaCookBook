@@ -8,8 +8,6 @@ import javax.xml.parsers.*;
 import org.w3c.dom.*;
 import org.xml.sax.*;
 
-import core.io.*;
-
 public class StringToDOM {
 
 	static String quote = "\"";

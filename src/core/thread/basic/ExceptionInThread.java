@@ -3,10 +3,6 @@ package core.thread.basic;
 /**
  * This example shows how the main thread continues, even if a spawned thread
  * dies
- * 
- * 
- * @author chq-vasanthakumars
- * 
  */
 public class ExceptionInThread {
 

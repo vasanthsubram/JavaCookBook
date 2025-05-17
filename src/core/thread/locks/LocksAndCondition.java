@@ -3,6 +3,7 @@ package core.thread.locks;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
+// A shared variable is incremented and decremented between 0 and 1
 public class LocksAndCondition {
 
 	public static  int binary=0;

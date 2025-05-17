@@ -9,6 +9,7 @@ public class VirtualThreadDemo {
             System.out.println(msg + " Local Variable: " + localVar);
         });
 
+        System.out.println("Thread class " + vThread.getClass());
         try {
             vThread.join();  // Wait for the virtual thread to finish execution
             //This ensures that the main thread waits for the virtual thread to finish before the program exits.
